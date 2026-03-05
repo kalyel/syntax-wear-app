@@ -1,4 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { ProductList } from '../../../components/ProductList'
+import { products } from '../../../mocks/products'
 
 export const Route = createFileRoute('/_app/products/')({
   component: RouteComponent,
@@ -6,14 +8,12 @@ export const Route = createFileRoute('/_app/products/')({
 
 function RouteComponent() {
   return (
-    <div className='container'>
-      <h1 className='text-black'>OLÁ</h1>
+    <div className='container pt-44 md:pt-54 pb-10 md:px10 mb-10 text-black bg-surface'>
+      <h1 className='text-3xl text-center mb-3'>Lista de produtos</h1>
 
-      <p className='text-black'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur doloribus repudiandae nobis, magnam, quod officiis obcaecati rem incidunt dicta dolore ducimus! Voluptates quia reiciendis rem quibusdam molestias minima animi facere.</p>
-      <p className='text-black'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur doloribus repudiandae nobis, magnam, quod officiis obcaecati rem incidunt dicta dolore ducimus! Voluptates quia reiciendis rem quibusdam molestias minima animi facere.</p>
-      <p className='text-black'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur doloribus repudiandae nobis, magnam, quod officiis obcaecati rem incidunt dicta dolore ducimus! Voluptates quia reiciendis rem quibusdam molestias minima animi facere.</p>
-      <p className='text-black'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur doloribus repudiandae nobis, magnam, quod officiis obcaecati rem incidunt dicta dolore ducimus! Voluptates quia reiciendis rem quibusdam molestias minima animi facere.</p>
-      <p className='text-black'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur doloribus repudiandae nobis, magnam, quod officiis obcaecati rem incidunt dicta dolore ducimus! Voluptates quia reiciendis rem quibusdam molestias minima animi facere.</p>
+      <h2 className='text-center mb-10 p-2'>Conforto excepcional para suas aventuras do dia a dia</h2>
+
+      <ProductList products={products} />
     </div>
   )
 }
