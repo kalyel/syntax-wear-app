@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Product } from "../interfaces/product";
 import { CartContext } from "./cartContext";
 
@@ -10,8 +10,17 @@ export interface ProductCart extends Product {
   quantity: number;
 }
 
+const localStorageKey = "@SyntaxWear:cart";
+
 export const CartProvider = ({ children }: CartContextProviderProps) => {
-  const [cart, setCart] = useState<ProductCart[]>([]);
+  const [cart, setCart] = useState<ProductCart[]>(() => {
+    const cartFromLocalStorage = localStorage.getItem(localStorageKey); 
+    return cartFromLocalStorage !== null ? JSON.parse(cartFromLocalStorage) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem(localStorageKey, JSON.stringify(cart));
+  }, [cart]);
 
   function addToCart(product: Product): void {
     const productExistsInCart = cart.find(
