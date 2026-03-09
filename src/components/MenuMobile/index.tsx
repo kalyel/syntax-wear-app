@@ -15,18 +15,18 @@ export const MenuMobile = ({ navLinks }: MenuMobileProps) => {
   return (
     <>
       <button
-        className="cursor-pointer"
+        className="cursor-pointer flex items-center"
         onClick={() => setMenuIsOpen(!menuIsOpen)}
       >
-        <img src={Iconmenu} alt="Icone menu" />
+        <img src={Iconmenu} alt="Icone menu"/>
       </button>
 
       <div
-        className={`${menuIsOpen ? "bg-black/70 visible" : "bg-transparent invisible"} fixed top-0 bottom-0 left-0 right-0 z-30`}
+        className={`${menuIsOpen ? "bg-black/70 visible" : "bg-transparent invisible"} fixed top-0 bottom-0 left-0 right-0 z-30 transition-all duration-600 ease-in-out`}
         onClick={() => setMenuIsOpen(!menuIsOpen)}
       >
         <div
-          className={`${menuIsOpen ? "translate-x-0" : "-translate-x-full"} absolute top-0 bottom-0 bg-white pt-6 transition-all duration-500 ease-in-out w-full`}
+          className={`${menuIsOpen ? "translate-x-0" : "-translate-x-full"} absolute top-0 bottom-0 bg-white pt-6 transition-all duration-700 ease-in-out w-full`}
           onClick={(e) => e.stopPropagation()}
         >
           <header className="bg-black text-white py-5 px-5">
