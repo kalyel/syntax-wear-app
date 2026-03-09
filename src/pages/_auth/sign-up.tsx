@@ -6,6 +6,9 @@ import GoogleIcon from "../../assets/images/icons/google-icon.png";
 
 export const Route = createFileRoute("/_auth/sign-up")({
   component: RouteComponent,
+  head: () => ({
+    meta: [{ title: "Cadastre-se - SyntaxWear" }],
+  }),
 });
 
 function RouteComponent() {
@@ -17,8 +20,10 @@ function RouteComponent() {
         <Separator />
 
         <button className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-md py-3 hover:bg-gray-50 transition cursor-pointer">
-          <img src={GoogleIcon} alt="Icone do google" className="w-5 g-5"/>
-          <span className="text-sm font-medium text-black">Continuar com o Google</span>
+          <img src={GoogleIcon} alt="Icone do google" className="w-5 g-5" />
+          <span className="text-sm font-medium text-black">
+            Continuar com o Google
+          </span>
         </button>
 
         <p className="text-sm text-gray-600 mt-6 text-center">

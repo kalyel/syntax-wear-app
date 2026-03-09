@@ -5,6 +5,9 @@ import OurStoresImg2 from "@/assets/images/banners/loja-2.png";
 
 export const Route = createFileRoute("/_app/our-stores/")({
   component: RouteComponent,
+  head: () => ({
+    meta: [{ title: "Nossas lojas - SyntaxWear" }],
+  })
 });
 
 function RouteComponent() {
@@ -34,17 +37,26 @@ function RouteComponent() {
               </p>
             </div>
 
-            <img src={OurStoresImg1} alt="Imagem de um tênis da loja" className="rounded-[20px] md:max-w-[42vw] aspect-10/7 obejct-cover size-full"/>
+            <img
+              src={OurStoresImg1}
+              alt="Imagem de um tênis da loja"
+              className="rounded-[20px] md:max-w-[42vw] aspect-10/7 obejct-cover size-full"
+            />
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-2.5">
-            <img src={OurStoresImg2} alt="Imagem de um tênis da loja" className="rounded-[20px] md:max-w-[42vw] aspect-10/7 object-cover size-full"/>
+            <img
+              src={OurStoresImg2}
+              alt="Imagem de um tênis da loja"
+              className="rounded-[20px] md:max-w-[42vw] aspect-10/7 object-cover size-full"
+            />
 
             <div className="text-center py-6 px-3">
               <h2 className="text-3xl mb-5">Atendimento Sob Medida</h2>
 
               <p>
-                Conte com dicas de estilo, sugestões exclusivas e suporte personalizado de quem realmente entende de moda.
+                Conte com dicas de estilo, sugestões exclusivas e suporte
+                personalizado de quem realmente entende de moda.
               </p>
             </div>
           </div>
