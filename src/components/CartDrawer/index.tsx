@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartContext } from "../../contexts/CartContexts";
+import { CartContext } from "../../contexts/CartContext";
 import { formatCurrency } from "../../utils/format-currency";
 
 interface CartDrawerProps {

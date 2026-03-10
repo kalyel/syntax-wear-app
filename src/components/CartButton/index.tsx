@@ -1,6 +1,6 @@
 import IconCart from "@/assets/images/icons/bag.svg";
 import { useContext } from "react";
-import { CartContext } from "../../contexts/CartContexts";
+import { CartContext } from "../../contexts/CartContext";
 
 interface CartButtonProps {
     onClick?: () => void;
