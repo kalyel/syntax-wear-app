@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# 👟 Syntax Wear 
+Loja online de tênis modernos, focada em experiência, conforto e tecnologia.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project animation gif](src/assets/images/gifs/e-commerce.gif)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Visite o projeto em produção
 
-## React Compiler
+> [syntax-wear-app-self.vercel.app](https://syntax-wear-app-self.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📚 Sobre o projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+SyntaxWear é uma aplicação web de e-commerce para venda de tênis, desenvolvida com React, TypeScript, Vite e TailwindCSS, no curso de Desenvolvimento Web Fullstack - DevQuest. O projeto simula uma loja moderna, com navegação intuitiva, carrinho de compras, filtros por categoria, páginas de produto, autenticação e design responsivo.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Principais funcionalidades
+- Listagem de produtos com imagens, descrição e preço
+- Filtros por categoria (Masculino, Feminino, Outlet)
+- Carrinho de compras com persistência local
+- Página de detalhes do produto
+- Formulários de login e cadastro
+- Navegação por rotas (TanStack Router)
+- Layout responsivo e moderno
+- Mock de produtos e categorias
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tecnologias utilizadas
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **TailwindCSS**
+- **TanStack Router**
+- **React Hook Form + Zod**
+- **ESLint**
+
+---
+
+## 📁 Estrutura de pastas
+
+```
+src/
+  assets/        # Imagens, logos, banners, ícones
+  components/    # Componentes reutilizáveis (Header, Footer, ProductCard, etc)
+  contexts/      # Contextos globais (ex: Cart)
+  interfaces/    # Tipos e interfaces TypeScript
+  mocks/         # Dados mockados de produtos e categorias
+  pages/         # Rotas e páginas principais
+  styles/        # CSS global
+  utils/         # Funções utilitárias
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Como rodar o projeto localmente
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone o repositório:**
+   ```bash
+   git clone <url-do-repo>
+   cd syntax-wear-app
+   ```
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+3. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+4. **Acesse:**
+   [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 📦 Scripts disponíveis
+
+- `npm run dev` — Inicia o servidor de desenvolvimento
+- `npm run build` — Gera o build de produção
+- `npm run preview` — Visualiza o build localmente
+- `npm run lint` — Executa o linter
+
+---
+
+## 🖥️ Deploy
+
+O projeto está hospedado na Vercel:
+
+> [syntax-wear-app-self.vercel.app](https://syntax-wear-app-self.vercel.app/)
+
+---
+
+## 📝 Licença
+
+Este projeto é apenas para fins de estudo e demonstração. Sinta-se livre para usar como referência.
+
+---
+
+## 💡 Contato
+
+Dúvidas ou sugestões? Entre em contato pelas redes sociais disponíveis no meu pefil.
