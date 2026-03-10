@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { Product } from "../../interfaces/product";
 import { MdAddShoppingCart } from "react-icons/md";
 import { useContext } from "react";
-import { CartContext } from "../../contexts/CartContext";
+import { CartContext } from "../../contexts/CartContexts";
 
 interface ProductCardProps {
     product: Product;
